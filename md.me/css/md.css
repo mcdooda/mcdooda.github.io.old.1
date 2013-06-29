@@ -1,0 +1,154 @@
+body {
+	width: 415px;
+	margin: auto;
+	background: url(../img/bg.jpg) top center no-repeat;
+	background-color: #E8E8E8;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	text-align: center;
+	font-family: Roboto, arial, sans-serif;
+	font-weight: 100;
+}
+
+h1 {
+	padding: 2px 7px;
+	font-size: 2.7em;
+}
+
+h2 {
+	padding: 0 4px 10px;
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.3em;
+	letter-spacing: 1.5px;
+	margin-bottom: 4px;
+	text-transform: capitalize;
+	font-weight: 300;
+	color: #37F;
+}
+
+#links {
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+	position: relative;
+}
+
+#links li {
+	float: left;
+	width: 200px;
+	height: 100px;
+	margin: 5px 0 0 5px;
+	list-style-type: none;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.7em;
+}
+#links li span {
+	display: none;
+	position: relative;
+	top: 15px;
+	text-shadow: 0px -1px 2px black, 0 1px 2px black, -1px 0 2px black, 1px 0 2px black;
+	color: white;
+	font-family: Courier, monospace;
+	font-weight: bold;
+	height: 20px;
+}
+#links li.open:hover span {
+	display: inline-block;
+}
+#links li a {
+	display: none;
+}
+.first-half {
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+.second-half {
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+.left-col {
+
+}
+.right-col {
+
+}
+
+#container {
+	position: relative;
+}
+
+#descriptions > div {
+	position: absolute;
+	top: 60px;
+	left: -65px;
+	width: 535px;
+	padding: 5px;
+	overflow: auto;
+	display: none;
+	font-family: Georgia, Palatino, sans-serif;
+	font-size: 1.2em;
+	color: #444;
+	background-color: rgba(232, 232, 232, 0.7);
+	border-radius: 8px;
+}
+#descriptions > div .carousel {
+	width: 60%;
+	margin: auto;
+}
+#descriptions > div .carousel .carousel-indicators li {
+	background-color: #37F;
+	cursor: pointer;
+}
+#descriptions > div .carousel .carousel-indicators li.active {
+	background-color: #F37;
+}
+#descriptions > div .carousel .carousel-control {
+	height: 30px;
+	width: 30px;
+	top: 90px;
+	font-size: 30px;
+	line-height: 24px;
+}
+
+.download {
+	text-align: center;
+	margin-top: 15px;
+}
+.download a {
+
+}
+.download a:hover {
+	
+}
+
+#social {
+	margin: 0;
+	padding: 0;
+	margin-top: 13px;
+	font-size: 1.3em;
+}
+#social li {
+	display: block;
+	width: 100%;
+}
+#social li strong {
+	display: inline-block;
+	width: 49%;
+	margin-right: 2%;
+	text-align: right;
+	color: #666;
+	font-family: Avantgarde, sans-serif;
+}
+#social a {
+	text-decoration: none;
+	color: #F37;
+	font-family: Roboto, arial, sans-serif;
+	font-weight: 300;
+}
+
