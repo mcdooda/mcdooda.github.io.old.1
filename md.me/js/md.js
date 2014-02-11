@@ -52,47 +52,49 @@ var md = {
 	},
 	
 	show: function($that, $next) {
-		$('.first-half').each(function() {
-			if (this != $that[0]) {
-				$(this).fadeOut('slow');
-			}
-		});
-		$('.second-half').each(function() {
-			if (this != $next[0]) {
-				$(this).fadeOut('slow');
-			}
-		});
-		$('#links li').css({
-			'z-index': 0
-		});
-				
-		$([$that[0], $next[0]]).css({
-			'z-index': 1,
-			'border-radius': '7px'
-		}).unbind('click').click(function() {
-			md.hide($that, $next);
-		});
-		
-		$that.animate({
-			left: 0,
-			top: 0,
-			'background-position': '0px 0px',
-			width: 405
-		}, 'slow', function() {
-			$(this).addClass('open');
-		});
-		
-		var top = $next.parent().height() - 55;
-		$next.animate({
-			left: 0,
-			top: top,
-			'background-position': '0px -' + top + 'px',
-			width: 405
-		}, 'slow', function() {
-			$(this).addClass('open');
-			var project = md.getProjectName($that);
-			$('#' + project).fadeIn();
-		});
+		if ($('#links li:animated').length == 0) {
+			$('.first-half').each(function() {
+				if (this != $that[0]) {
+					$(this).fadeOut('slow');
+				}
+			});
+			$('.second-half').each(function() {
+				if (this != $next[0]) {
+					$(this).fadeOut('slow');
+				}
+			});
+			$('#links li').css({
+				'z-index': 0
+			});
+					
+			$([$that[0], $next[0]]).css({
+				'z-index': 1,
+				'border-radius': '7px'
+			}).unbind('click').click(function() {
+				md.hide($that, $next);
+			});
+			
+			$that.animate({
+				left: 0,
+				top: 0,
+				'background-position': '0px 0px',
+				width: 405
+			}, 'slow', function() {
+				$(this).addClass('open');
+			});
+			
+			var top = $next.parent().height() - 55;
+			$next.animate({
+				left: 0,
+				top: top,
+				'background-position': '0px -' + top + 'px',
+				width: 405
+			}, 'slow', function() {
+				$(this).addClass('open');
+				var project = md.getProjectName($that);
+				$('#' + project).fadeIn();
+			});
+		}
 	},
 	
 	hide: function($that, $next) {
